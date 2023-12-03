@@ -1,8 +1,15 @@
-import Vue from 'vue'
+import { createPinia } from 'pinia'
+
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+//import 'vuesalize/dist/vuesalize.css'
+//import Vuesalize from 'vuesalize'
+
+
+
+import './assets/style.css'
+
+//createApp(App).use(Vuesalize).mount('#app')
+createApp(App).use(createPinia()).mount('#app')

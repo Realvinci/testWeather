@@ -1,0 +1,212 @@
+[debug] [2023-11-22T07:07:34.056Z] ----------------------------------------------------------------------
+[debug] [2023-11-22T07:07:34.059Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-11-22T07:07:34.059Z] CLI Version:   12.9.1
+[debug] [2023-11-22T07:07:34.060Z] Platform:      linux
+[debug] [2023-11-22T07:07:34.060Z] Node Version:  v18.17.1
+[debug] [2023-11-22T07:07:34.060Z] Time:          Wed Nov 22 2023 08:07:34 GMT+0100 (West Africa Standard Time)
+[debug] [2023-11-22T07:07:34.061Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-22T07:07:34.145Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-22T07:07:34.145Z] > authorizing via signed-in user (kutivinci@gmail.com)
+[debug] [2023-11-22T07:07:34.145Z] [iam] checking project weatherstation-23035 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-11-22T07:07:34.148Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weatherstation-23035:testIamPermissions [none]
+[debug] [2023-11-22T07:07:34.148Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weatherstation-23035:testIamPermissions x-goog-quota-user=projects/weatherstation-23035
+[debug] [2023-11-22T07:07:34.148Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weatherstation-23035:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-11-22T07:07:36.647Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weatherstation-23035:testIamPermissions 200
+[debug] [2023-11-22T07:07:36.648Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weatherstation-23035:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-11-22T07:07:36.650Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 [none]
+[debug] [2023-11-22T07:07:38.178Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 200
+[debug] [2023-11-22T07:07:38.178Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 {"projectId":"weatherstation-23035","projectNumber":"19888683323","displayName":"weatherstation","name":"projects/weatherstation-23035","resources":{"hostingSite":"weatherstation-23035","realtimeDatabaseInstance":"weatherstation-23035-default-rtdb"},"state":"ACTIVE","etag":"1_385196a9-ce9c-4216-968f-e64c269f97af"}
+[debug] [2023-11-22T07:07:38.179Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 [none]
+[debug] [2023-11-22T07:07:38.866Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 200
+[debug] [2023-11-22T07:07:38.867Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 {"projectId":"weatherstation-23035","projectNumber":"19888683323","displayName":"weatherstation","name":"projects/weatherstation-23035","resources":{"hostingSite":"weatherstation-23035","realtimeDatabaseInstance":"weatherstation-23035-default-rtdb"},"state":"ACTIVE","etag":"1_385196a9-ce9c-4216-968f-e64c269f97af"}
+[info] 
+[info] === Deploying to 'weatherstation-23035'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-11-22T07:07:38.887Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/weatherstation-23035/locations/-/instances/weatherstation-23035-default-rtdb [none]
+[debug] [2023-11-22T07:07:46.778Z] ----------------------------------------------------------------------
+[debug] [2023-11-22T07:07:46.781Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2023-11-22T07:07:46.782Z] CLI Version:   12.9.1
+[debug] [2023-11-22T07:07:46.782Z] Platform:      linux
+[debug] [2023-11-22T07:07:46.782Z] Node Version:  v18.17.1
+[debug] [2023-11-22T07:07:46.783Z] Time:          Wed Nov 22 2023 08:07:46 GMT+0100 (West Africa Standard Time)
+[debug] [2023-11-22T07:07:46.783Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-22T07:07:46.866Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-22T07:07:46.866Z] > authorizing via signed-in user (kutivinci@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/vinci/test/Weather-App
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-22T07:08:06.747Z] Using project from CLI flag: weatherstation-23035
+[debug] [2023-11-22T07:08:06.752Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 [none]
+[debug] [2023-11-22T07:08:07.890Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 200
+[debug] [2023-11-22T07:08:07.891Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 {"projectId":"weatherstation-23035","projectNumber":"19888683323","displayName":"weatherstation","name":"projects/weatherstation-23035","resources":{"hostingSite":"weatherstation-23035","realtimeDatabaseInstance":"weatherstation-23035-default-rtdb"},"state":"ACTIVE","etag":"1_385196a9-ce9c-4216-968f-e64c269f97af"}
+[info] i  Using project weatherstation-23035 (weatherstation) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/vinci/test/Weather-App 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=1036617573&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-11-22T07:08:09.866Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-11-22T07:08:09.868Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-11-22T07:08:10.945Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-11-22T07:08:10.946Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-11-22T07:08:10.982Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-11-22T07:08:11.781Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-11-22T07:08:11.782Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Realvinci","id":40923786,"node_id":"MDQ6VXNlcjQwOTIzNzg2","avatar_url":"https://avatars.githubusercontent.com/u/40923786?v=4","gravatar_id":"","url":"https://api.github.com/users/Realvinci","html_url":"https://github.com/Realvinci","followers_url":"https://api.github.com/users/Realvinci/followers","following_url":"https://api.github.com/users/Realvinci/following{/other_user}","gists_url":"https://api.github.com/users/Realvinci/gists{/gist_id}","starred_url":"https://api.github.com/users/Realvinci/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Realvinci/subscriptions","organizations_url":"https://api.github.com/users/Realvinci/orgs","repos_url":"https://api.github.com/users/Realvinci/repos","events_url":"https://api.github.com/users/Realvinci/events{/privacy}","received_events_url":"https://api.github.com/users/Realvinci/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":17,"public_gists":0,"followers":0,"following":0,"created_at":"2018-07-07T21:08:56Z","updated_at":"2023-11-20T21:18:47Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":51872,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as Realvinci 
+[info] 
+[debug] [2023-11-22T07:36:21.463Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:36:22.776Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2023-11-22T07:36:22.777Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-11-22T07:36:25.339Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:36:25.566Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:36:27.053Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2023-11-22T07:36:27.054Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-11-22T07:36:27.869Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2023-11-22T07:36:27.869Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-11-22T07:36:49.319Z] >>> [apiv2][query] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:37:00.653Z] <<< [apiv2][status] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key 401
+[debug] [2023-11-22T07:37:00.655Z] <<< [apiv2][body] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-11-22T07:37:26.472Z] >>> [apiv2][query] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:37:33.647Z] ----------------------------------------------------------------------
+[debug] [2023-11-22T07:37:33.650Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2023-11-22T07:37:33.651Z] CLI Version:   12.9.1
+[debug] [2023-11-22T07:37:33.651Z] Platform:      linux
+[debug] [2023-11-22T07:37:33.652Z] Node Version:  v18.17.1
+[debug] [2023-11-22T07:37:33.652Z] Time:          Wed Nov 22 2023 08:37:33 GMT+0100 (West Africa Standard Time)
+[debug] [2023-11-22T07:37:33.652Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-22T07:37:33.762Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-22T07:37:33.763Z] > authorizing via signed-in user (kutivinci@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/vinci/test/Weather-App
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-22T07:38:06.019Z] Using project from CLI flag: weatherstation-23035
+[debug] [2023-11-22T07:38:06.021Z] > refreshing access token with scopes: []
+[debug] [2023-11-22T07:38:06.028Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-22T07:38:06.028Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-22T07:38:08.727Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-11-22T07:38:08.727Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-22T07:38:08.748Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 [none]
+[debug] [2023-11-22T07:38:15.632Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 200
+[debug] [2023-11-22T07:38:15.634Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 {"projectId":"weatherstation-23035","projectNumber":"19888683323","displayName":"weatherstation","name":"projects/weatherstation-23035","resources":{"hostingSite":"weatherstation-23035","realtimeDatabaseInstance":"weatherstation-23035-default-rtdb"},"state":"ACTIVE","etag":"1_385196a9-ce9c-4216-968f-e64c269f97af"}
+[info] i  Using project weatherstation-23035 (weatherstation) 
+[info] 
+=== Hosting Setup
+[debug] [2023-11-22T07:38:15.664Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 [none]
+[debug] [2023-11-22T07:38:21.182Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 200
+[debug] [2023-11-22T07:38:21.185Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weatherstation-23035 {"projectId":"weatherstation-23035","projectNumber":"19888683323","displayName":"weatherstation","name":"projects/weatherstation-23035","resources":{"hostingSite":"weatherstation-23035","realtimeDatabaseInstance":"weatherstation-23035-default-rtdb"},"state":"ACTIVE","etag":"1_385196a9-ce9c-4216-968f-e64c269f97af"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-11-22T07:38:33.208Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-11-22T07:38:34.391Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-11-22T07:38:34.392Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.6.0","browserURL":"https://www.gstatic.com/firebasejs/10.6.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.6.0/firebase.tgz"},"live":{"version":"10.6","browserURL":"https://www.gstatic.com/firebasejs/live/10.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.6.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.6.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.6.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.6.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.6.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.6.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.6.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.6.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/vinci/test/Weather-App 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=495477810&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-11-22T07:38:41.737Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-11-22T07:38:41.738Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-11-22T07:38:44.225Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-11-22T07:38:44.232Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-11-22T07:38:44.290Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-11-22T07:38:45.968Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-11-22T07:38:45.969Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Realvinci","id":40923786,"node_id":"MDQ6VXNlcjQwOTIzNzg2","avatar_url":"https://avatars.githubusercontent.com/u/40923786?v=4","gravatar_id":"","url":"https://api.github.com/users/Realvinci","html_url":"https://github.com/Realvinci","followers_url":"https://api.github.com/users/Realvinci/followers","following_url":"https://api.github.com/users/Realvinci/following{/other_user}","gists_url":"https://api.github.com/users/Realvinci/gists{/gist_id}","starred_url":"https://api.github.com/users/Realvinci/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Realvinci/subscriptions","organizations_url":"https://api.github.com/users/Realvinci/orgs","repos_url":"https://api.github.com/users/Realvinci/repos","events_url":"https://api.github.com/users/Realvinci/events{/privacy}","received_events_url":"https://api.github.com/users/Realvinci/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":17,"public_gists":0,"followers":0,"following":0,"created_at":"2018-07-07T21:08:56Z","updated_at":"2023-11-22T07:19:28Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":51872,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as Realvinci 
+[info] 
+[debug] [2023-11-22T07:39:14.718Z] >>> [apiv2][query] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:39:26.546Z] <<< [apiv2][status] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key 404
+[debug] [2023-11-22T07:39:26.548Z] <<< [apiv2][body] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-11-22T07:39:55.266Z] >>> [apiv2][query] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:39:57.470Z] <<< [apiv2][status] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key 404
+[debug] [2023-11-22T07:39:57.471Z] <<< [apiv2][body] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-11-22T07:40:02.527Z] >>> [apiv2][query] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:40:03.510Z] <<< [apiv2][status] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key 404
+[debug] [2023-11-22T07:40:03.511Z] <<< [apiv2][body] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-11-22T07:40:07.771Z] >>> [apiv2][query] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key type=owner
+[debug] [2023-11-22T07:40:08.935Z] <<< [apiv2][status] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key 404
+[debug] [2023-11-22T07:40:08.936Z] <<< [apiv2][body] GET https://api.github.com/repos/Realtime-weather/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 

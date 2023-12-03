@@ -1,28 +1,25 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+<script setup>
+import MenuBar from './components/MenuBar.vue'
+import TodayData from './components/TodayData.vue'
+import ForecastData from './components/ForecastData.vue'
+import FooterBar from './components/FooterBar.vue'
+import Weather from './components/weather.vue'
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <header>
+    <MenuBar />
+  </header>
+  <main>
+    <TodayData />
+    <ForecastData />
+  </main>
+  <footer>
+    <FooterBar />
+  </footer>
+   <!-- <Weather/>  -->
+  
+</template>
+
+<style scoped></style>
